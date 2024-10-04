@@ -72,13 +72,32 @@
             alt="랜덤이미지"
         /> -->
         <hr />
-        <img
+        <!-- <img
             src="./images/img.jpg"
             alt="놀이기는 타는 신난 사람들"
         />
         <img
             src="/images/img.jpg"
             alt="놀이기는 타는 신난 사람들"
-        />
+        /> -->
+
+        <picture>
+            <source
+                media="(max-width:500px)"
+                srcset="./images/img.jpg"
+                width="200"
+            />
+            <source
+                media="(max-width:750px)"
+                srcset="./images/img.jpg"
+                width="400px"
+            />
+            <img
+                src="./images/img.jpg"
+                alt="신난 사람들"
+                width="auto"
+            />
+        </picture>
+        <hr />
     </body>
 </html>
