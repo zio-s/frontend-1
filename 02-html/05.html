@@ -1,11 +1,49 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>block & inline | html</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <style>
+    .blue {
+      background: green;
+    }
+    .red {
+      background: red;
+    }
+    .yellow {
+      background: yellow;
+    }
+    .dark {
+      background: #000;
+    }
+    .tomato {
+      background: tomato;
+    }
+    #blue {
+      background: darkblue;
+    }
+  </style>
+  <body>
+    <h1>html</h1>
+    <h2>block & inline</h2>
+
+    <!-- block : 밑으로 배치~ -->
+    <div class="blue" id="blue">블루</div>
+    <div class="red" id="blue">레드</div>
+    <div class="yellow">노랭</div>
+    <div class="dark">검정</div>
+    <div class="tomato">토마노</div>
+    <div>
+      <div>
+        <div>
+          <form action="https://www.google.com/search?" id="search" name="search" autocomplete="on" method="get" target="_blank">
+            <input type="search" id="se" name="q" value="" />
+          </form>
+        </div>
+      </div>
+    </div>
+    <span></span>
+  </body>
 </html>
