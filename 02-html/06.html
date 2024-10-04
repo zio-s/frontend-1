@@ -16,6 +16,14 @@
       input[id="id"]:focus {
         background: #eee;
         border-bottom: 5px solid red;
+        transition: 0.5s;
+        scale: 1.1;
+      }
+      input[id="pw"]:focus {
+        background: #eee;
+        border-bottom: 5px solid red;
+        transition: 0.5s;
+        scale: 1.1;
       }
     </style>
   </head>
@@ -26,18 +34,40 @@
     <form action="https://www.google.com/search?" autocomplete="on" target="_blank">
       <fieldset>
         <legend>검색</legend>
+        <label for="se">검색</label>
         <input type="search" placeholder="구글 검색창" name="q" id="se" value="" />
-        <label for="se">확인</label>
       </fieldset>
     </form>
     <form>
       <fieldset>
         <legend>회원가입</legend>
+        <label for="name">이름</label>
+        <input type="text" id="name" name="name" placeholder="성함을 입력해주세요" value="index.html" readonly disabled />
         <label for="id">아이디</label>
-        <input type="text" placeholder="아이디를 입력하세요" id="id" name="id" autofocus required />
+        <input type="text" placeholder="아이디를 입력하세요" id="id" name="id" autofocus required maxlength="5" />
         <label for="pw">비밀번호</label>
         <input type="password" placeholder="비밀번호를 입력하세요" id="pw" name="pw" required />
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" />
+        <hr />
+        <label for="file">첨부파일</label>
+        <input type="file" id="file" name="file" />
         <button style="width: 70px; height: 25px">가입하기</button>
+        <hr />
+        <label for="see">남자</label>
+        <input type="radio" name="ch" id="see" />
+        <label for="gr">여자</label>
+        <input type="radio" name="ch" id="gr" />
+        <hr />
+        <label for="tel">전화번호</label>
+        <input type="tel" id="tel" name="tel" />
+
+        <br /><label for="text">남기고 싶은 말</label><br />
+        <textarea name="text" id="text" rows="20">내용</textarea>
+        <button onclick="alert('hello semin!!')">버튼</button>
+        <input type="button" value="버튼" onclick="alert('버튼2')" />
+        <hr />
+        <input type="submit" value="회원가입" />
       </fieldset>
     </form>
   </body>
