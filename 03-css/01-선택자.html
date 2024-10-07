@@ -1,11 +1,130 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      h1 {
+        color: red;
+      }
+      #logo {
+        color: blueviolet;
+      }
+      #logo.logo {
+        color: pink;
+      }
+      .sel1 > p {
+        color: blue;
+      }
+      .sel1 > section p {
+        color: green;
+      }
+      label {
+        position: relative;
+      }
+      input:checked + label::before {
+        content: "";
+        position: absolute;
+        right: -30px;
+        bottom: 0;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: green;
+      }
+      .btn {
+        display: block;
+        width: 150px;
+        height: 30px;
+        background: #ccc;
+        text-align: center;
+        line-height: 30px;
+        text-decoration: none;
+        color: #111;
+        border-radius: 25px;
+        transition: 0.2s;
+      }
+      .btn:hover {
+        transform: scale(1.2);
+        background: #000;
+        color: #fff;
+        transition: 0.2s;
+      }
+      nav {
+        display: flex;
+        
+      }
+      ul{
+        display: flex;
+        gap: 20px;
+        list-style: none;
+      }
+      li{
+        padding: 20px;
+      }
+      li span {
+        margin-left: 25px;
+      }
+      ul > li:first-child {
+        background: tomato;
+      }
+      li:last-child span {
+        display: none;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css</h1>
+    <h2>선택자</h2>
+
+    <h1 id="logo" class="logo">logo</h1>
+    <div class="sel1">
+      <p>자식</p>
+      <p>자식</p>
+      <section>
+        <p>손자</p>
+      </section>
+    </div>
+
+    <!-- 인접 형제 선택자 -->
+    <input type="checkbox" id="user" />
+    <label for="user">이용약관</label>
+    <br />
+    <input type="checkbox" id="player" checked />
+    <label for="player">개인정보처리방침</label>
+
+    <!-- 상태 선택기 -->
+    <hr />
+    <a href="#" class="btn">버튼</a>
+
+    <nav>
+      <ul>
+        <li>menu2<span>|</span></li>
+        <li>menu2<span>|</span></li>
+        <li>menu2<span>|</span></li>
+        <li>menu2<span>|</span></li>
+      </ul>
+    </nav>
+
+    <hr>
+    <input type="text" placeholder="나를 클릭하여 초점을 맞추세요">
+    <style>
+      input[type=text]{
+        height: 50px;
+        width: 400px;
+        padding: 0 10px;
+        background: #ccc;
+        border: 3px solid #000;
+      }
+      input:focus{
+        background: #999;
+        border: 10px solid blue;
+      }
+      input:focus::placeholder{
+        color: green;
+      }
+    </style>
+  </body>
 </html>
