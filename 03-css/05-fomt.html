@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css | font</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>css</h1>
+    <h2>font</h2>
+
+    <hr />
+    <!-- font-family : 끌꼴 -->
+    <div>
+      <p class="text1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius reprehenderit, maiores fuga optio ex minus quaerat. Sunt suscipit sit qui tempore, vero nam eos ex earum perferendis quam vel inventore?</p>
+    </div>
+    <div class="ani">
+      <ul class="anibox">
+        <li class="list1 list"></li>
+        <li class="list2 list"></li>
+      </ul>
+    </div>
+    <p class="txt2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia, necessitatibus?</p>
+    <p class="txt3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, voluptatum.</p>
+    <style>
+      * {
+        list-style: none;
+      }
+      html,
+      body {
+        font-size: 1rem;
+        font-family: "Noto Sans KR", sans-serif;
+        font-optical-sizing: auto;
+        
+      }
+      
+      ul.anibox {
+        position: relative;
+        width: 80px;
+        height: 80px;
+        border: .8px solid #000;
+      }
+      li.list {
+        width: 32px;
+        height: 32px;
+        border: .8px solid #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        animation: ani 1s 0.1s infinite alternate;
+      }
+      li.list2 {
+        width: 32px;
+        height: 32px;
+        border: .8px solid #000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+        animation: ani2 1s 0.1s infinite alternate;
+      }
+      li.list:hover {
+        transform: translate(-50%, -50%) rotate(45deg);
+      }
+
+      @keyframes ani {
+        0% {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+        50% {
+          transform: translate(-50%, -50%) rotate(80deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+      @keyframes ani2 {
+        0% {
+          transform: translate(-50%, -50%) rotate(-45deg);
+        }
+        50% {
+          transform: translate(-50%, -50%) rotate(40deg);
+        }
+        100% {
+          transform: translate(-50%, -50%) rotate(45deg);
+        }
+      }
+      .text1 {
+        line-height: 1.5;
+        letter-spacing: -0.32px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: bold;
+      }
+
+      .txt2 {
+        font-size: 16px;
+      }
+      .txt3 {
+        font-size: 1.25em;
+        color: blueviolet;
+      }
+    </style>
+    <ul>
+      <li class="fs1">안녕하세요..</li>
+      <li class="fs2"><b>프론트엔드</b> 공부 중입니다..</li>
+      <li class="fs3">난 고양이름 좋아해요</li>
+      <li class="fs4"><b>쓸 말이</b> 없어요...</li>
+    </ul>
+    <style>
+      .fs1 {
+        font-size: .875rem;
+      }
+      .fs2 {
+        font-size: 1rem;
+      }
+      .fs2 b {
+        font-size: 1.25rem;
+      }
+      .fs3 {
+        font-size: 1.75rem;
+      }
+      .fs4 {
+        font-size: 2rem;
+      }
+      .fs4 b{
+        font-size: 2rem;
+      }
+      /* em : 부모를 기준으로 배수를 계산 */
+      /* ex) 부모 폰트 사이즈가 16px일 때 1em - 16px 2em= - 32px*/
+      
+
+      /* rem : html, body 를 기준으로 배수를 계산
+        기준이 변경되지 않는다.
+       */
+
+    </style>
+
+    <!-- vw : viewport -->
+    <p class="txt5">vw를 배워봅시다.</p>
+    <style>
+      .txt5{
+        font-size: 10vw;
+      }
+    </style>
+  </body>
+</html>
