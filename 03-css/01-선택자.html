@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    
     <style>
       h1 {
         color: red;
@@ -66,9 +67,6 @@
       li span {
         margin-left: 25px;
       }
-      ul > li:first-child {
-        background: tomato;
-      }
       li:last-child span {
         display: none;
         
@@ -124,6 +122,36 @@
       }
       input:focus::placeholder{
         color: green;
+      }
+    </style>
+
+
+
+    <!-- 가상 선택자 ::before, :: after -->
+    <ul class="list1">
+      <li class="list2">menu1</li>
+      <li class="list2">menu2</li>
+      <li class="list2">menu3</li>
+      <li class="list2">menu4</li>
+    </ul>
+    <style>
+      .list1::before{
+        content: 'ul의 앞의 내용';
+        
+      }
+      .list1::after{
+        content: 'ul의 뒤의 내용';
+        
+      }
+      .list2::before{
+        content: "li앞의 내용";
+        margin: 0 15px;
+        background: greenyellow;
+      }
+      .list2::after{
+        content: "li뒤의 내용";
+        margin: 0 15px;
+        background: tomato;
       }
     </style>
   </body>
