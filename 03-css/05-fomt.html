@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>css | font</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
   </head>
   <body>
     <h1>css</h1>
@@ -35,19 +36,18 @@
         font-size: 16px;
         font-family: "Noto Sans KR", sans-serif;
         font-optical-sizing: auto;
-        
       }
-      
+
       ul.anibox {
         position: relative;
         width: 5rem;
         height: 5rem;
-        border: .05rem solid #000;
+        border: 0.05rem solid #000;
       }
       li.list {
         width: 2rem;
         height: 2rem;
-        border: .05rem solid #000;
+        border: 0.05rem solid #000;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -57,7 +57,7 @@
       li.list2 {
         width: 2rem;
         height: 2rem;
-        border: .05rem solid #000;
+        border: 0.05rem solid #000;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -127,17 +127,15 @@
       .fs4 {
         font-size: 32px;
       }
-      .fs4 b{
+      .fs4 b {
         font-size: 32px;
       }
       /* em : 부모를 기준으로 배수를 계산 */
       /* ex) 부모 폰트 사이즈가 1rem일 때 1em - 1rem 2em= - 2rem*/
-      
 
       /* rem : html, body 를 기준으로 배수를 계산
         기준이 변경되지 않는다.
        */
-
     </style>
 
     <!-- vw : viewport -->
@@ -148,25 +146,31 @@
       }
     </style> -->
 
+    <!-- font awesome  -->
+    <i class="fa-solid fa-house fa-xs"></i>
+    <i class="fa-regular fa-user"></i>
 
+    <style>
+      .fa-house {
+        color: red;
+        font-size: 80px;
+        margin-top: 3.125rem;
+      }
+      .svg-house {
+        transform: scale(10);
+      }
+    </style>
 
-  <!-- font awesome  -->
-  <i class="fa-solid fa-house fa-xs"></i>
-  <i class="fa-regular fa-user"></i>
-
-  <style>
-    .fa-house{
-      color: red;
-      font-size: 80px;
-      margin-top: 3.125rem;
-      
-    }
-    .svg-house{
-      transform: scale(10);
-      
-    }
-  </style>
-
-  <svg class="svg-house" xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path fill="#74C0FC" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"/></svg>
+    <svg class="svg-house" xmlns="http://www.w3.org/2000/svg" height="12" width="13.5" viewBox="0 0 576 512">
+      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path fill="#74C0FC" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+    </svg>
+    <hr />
+    <hr />
+    <hr />
+    <span class="material-symbols-rounded"> delete </span>
+    <span class="material-symbols-rounded"> home </span>
+    <span class="material-symbols-rounded"> box </span>
+    <span class="material-symbols-rounded"> menu </span>
   </body>
 </html>
