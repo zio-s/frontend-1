@@ -1,26 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>box</title>
-</head>
-<body>
-  <h1>css</h1>
-  <h2>display</h2>
-  <div class="box1">
-    box
-  </div>
-  <span class="box2">
-    box2
-  </span>
-  <style>
-    .box1{
-      background: yellowgreen;
-    }
-    .box2{
-      background: lightgreen;
-    }
-  </style>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>box</title>
+    <style>
+      html,body{
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css</h1>
+    <h2>display</h2>
+    <div class="box1">box</div>
+    <span class="box2"> box2 </span>
+    <style>
+      .box1 {
+        margin: 0 auto;
+        height: 300px;
+        max-width: 460px;
+        background: rgb(27, 204, 204);
+      }
+      .box2 {
+        display: block;
+        width: 500px;
+        height: 300px;
+        background: lightgreen;
+      }
+      @media screen and (min-width:600px) {
+        .box1{
+          max-width: none;
+          height: auto;
+          background: red;
+        }
+        
+      }
+    </style>
+  </body>
 </html>
