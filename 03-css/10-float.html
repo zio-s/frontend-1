@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>float</title>
+  </head>
+  <body>
+    <h1>css</h1>
+    <h2>float</h2>
+    <div id="wrap">
+      <header class="clearfix">
+        <h1 class="logo">logo</h1>
+        <nav>nav</nav>
+      </header>
+      <main>
+        <ul class="clearfix">
+          <li>list</li>
+          <li>list</li>
+          <li>list</li>
+          <li>list</li>
+          <li class="list">list</li>
+        </ul>
+      </main>
+      <footer>footer</footer>
+    </div>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+      }
+      ul {
+        width: 100%;
+        background: skyblue;
+      }
+      .clearfix::after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+      li {
+        list-style: none;
+        height: 200px;
+        width: calc(20% - 20px);
+        background: tomato;
+        float: left;
+        /* margin-right: 10px; */
+        border: 1px solid #000;
+        box-sizing: border-box;
+        margin-right: 20px;
+      }
+      
+      header {
+        border: 1px solid #000;
+        background: wheat;
+        /* overflow: hidden; */
+      }
+      .logo {
+        float: left;
+      }
+      nav {
+        float: right;
+      }
+
+      main {
+        border: 1px solid #000;
+        background: darkkhaki;
+      }
+      footer {
+        border: 1px solid #000;
+        background: limegreen;
+      }
+    </style>
+  </body>
+</html>
